@@ -16,7 +16,8 @@
     "lint": "eslint --ext .js,.ts,.tsx .",
     "release": "release-it",
     "example": "yarn --cwd example",
-    "bootstrap": "yarn example && yarn"
+    "bootstrap": "yarn example && yarn",
+    "build": "bob build"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
@@ -46,5 +47,14 @@
     "react": "*",
     "react-native": "*",
     "react-native-pager-view": "*"
+  },
+  "react-native-builder-bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      "commonjs",
+      "module",
+      "typescript"
+    ]
   }
 }
