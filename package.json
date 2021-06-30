@@ -1,11 +1,11 @@
 {
   "name": "react-native-tab-view",
-  "version": "3.0.2",
+  "version": "3.0.1",
   "description": "Tab view component for React Native",
   "main": "lib/commonjs/index.js",
   "react-native": "src/index.tsx",
   "module": "lib/module/index.js",
-  "types": "src/defs/src/index.d.ts",
+  "types": "lib/typescript/src/index.d.ts",
   "files": [
     "src",
     "lib"
@@ -43,6 +43,9 @@
     "url": "https://github.com/satya164/react-native-tab-view/issues"
   },
   "homepage": "https://github.com/satya164/react-native-tab-view#readme",
+  "devDependencies": {
+    "react-native-builder-bob": "^0.18.1"
+  },
   "peerDependencies": {
     "react": "*",
     "react-native": "*",
