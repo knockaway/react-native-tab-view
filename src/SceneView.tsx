@@ -15,6 +15,7 @@ type Props<T extends Route> = SceneRendererProps &
     index: number;
     children: (props: { loading: boolean }) => React.ReactNode;
     containerStyle?: StyleProp<ViewStyle>;
+    style?: StyleProp<ViewStyle>;
   };
 
 type State = {
@@ -92,7 +93,13 @@ export default class SceneView<T extends Route> extends React.Component<
   };
 
   render() {
-    const { navigationState, index, layout, containerStyle } = this.props;
+    const {
+      navigationState,
+      index,
+      layout,
+      containerStyle,
+      style: defaultStyle,
+    } = this.props;
     const { loading } = this.state;
 
     const focused = navigationState.index === index;
@@ -110,6 +117,7 @@ export default class SceneView<T extends Route> extends React.Component<
             : focused
             ? StyleSheet.absoluteFill
             : null,
+          !focused && defaultStyle,
           containerStyle,
         ]}
       >
